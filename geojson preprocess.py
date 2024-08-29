@@ -38,7 +38,6 @@ def save_individual_csvs(df, rural_gdf, urban_gdf, water_gdf):
     extract and save surface type and geometry for each log
     """
     start_time = time.perf_counter()
-    
     gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df['n_X'], df['n_Y']))
     gdf.set_crs('EPSG:4326', inplace=True)
 
@@ -97,4 +96,3 @@ if __name__ == "__main__":
     save_individual_csvs(df, rural_gdf, urban_gdf, water_gdf)
     finish = time.perf_counter()
     print(f"tot process time took: {round(finish - start_time, 2)} seconds")
-

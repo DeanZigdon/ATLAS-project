@@ -1,16 +1,16 @@
 -- takes geojson preprocess.py csv and merge them to create a log with all surface type on each log.
---- display original extracted csv from qgis.geojson
---select * from rural_data;
---select * from urban_data;
+-- display original extracted csv from qgis.geojson
+--- select * from rural_data;
+--- select * from urban_data;
 
---- check occurences for each surface type
---SELECT surface_type, COUNT("unknown") AS occurences
---FROM rural_data
---GROUP BY surface_type;
+-- check occurences for each surface type
+--- SELECT surface_type, COUNT("unknown") AS occurences
+--- FROM rural_data
+--- GROUP BY surface_type;
 
---SELECT surface_type, COUNT("unknown") AS occurences
---FROM urban_data
---GROUP BY surface_type;
+--- SELECT surface_type, COUNT("unknown") AS occurences
+--- FROM urban_data
+--- GROUP BY surface_type;
 
 -- shows the differences between surface_type classifications between urban and rural csv, based on TAG # & same time
 
@@ -38,10 +38,10 @@ order by surface_type_combined desc;
 
 
 
---- to avoid permission issues, export csv manually (mark field separator as ','), else- use this:
---SELECT *
---INTO OUTFILE 'path\surface_type_combined.csv' -- change to local path
---FIELDS TERMINATED BY ','
---ENCLOSED BY '"'
---LINES TERMINATED BY '\n'
---FROM combined_data;
+-- to avoid permission issues, export csv manually (mark field separator as ','), else- use this:
+--- SELECT *
+--- INTO OUTFILE 'path\surface_type_combined.csv' -- change to local path
+--- FIELDS TERMINATED BY ','
+--- ENCLOSED BY '"'
+--- LINES TERMINATED BY '\n'
+--- FROM combined_data;
